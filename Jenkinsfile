@@ -14,8 +14,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                dir("/C:/Users/isha.choudhary/OneDrive - HCL Technologies Ltd/Documents/jenkins-pipeline-example/my-app/src") {
-                sh 'mvn -B -DskipTests clean package'
+                dir("/var/lib/jenkins/workspace/product_p/my-app") {
+                sh 'make check'
                 }
             }
         }
@@ -23,6 +23,9 @@ pipeline {
     post {
        always {
            echo 'PASSED!!!'
+      }
+        failure {
+            mail to: ishachoudhary521@gmail.com, subject: 'The Pipeline failed :('
       }
    } 
 }
