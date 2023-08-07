@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                dir("C:\Users\isha.choudhary\OneDrive - HCL Technologies Ltd\Documents\jenkins-pipeline-example\my-app\src") {
+                dir("C:/Users/isha.choudhary/OneDrive - HCL Technologies Ltd/Documents/jenkins-pipeline-example/my-app/src") {
                 sh 'mvn -B -DskipTests clean package'
                 }
             }
