@@ -25,7 +25,7 @@ pipeline {
            echo 'PASSED!!!'
       }
         failure {
-            mail to: ishachoudhary521@gmail.com, subject: 'The Pipeline failed :('
+            mail to: ishachoudhary521@gmail.com, subject: 'The Pipeline failed'
       }
    } 
 }
