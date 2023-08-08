@@ -24,5 +24,8 @@ pipeline {
        always {
            echo 'PASSED!!!'
       }
+        failure {
+            emailext body: 'Error ! pipeline failed', subject: 'FAILED PIPELINE', to: 'ishachoudhary521@gmail.com'
+        }
    } 
 }
