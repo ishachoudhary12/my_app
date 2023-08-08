@@ -14,9 +14,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                dir("C:/Program Files/Jenkins") {
                 sh 'make check'
-                }
             }
         }
      }
