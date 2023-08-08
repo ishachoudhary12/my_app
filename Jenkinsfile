@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                dir("/var/lib/jenkins/workspace/product_p/my-app") {
+                dir("C:/ProgramData/Jenkins/.jenkins") {
                 sh 'make check'
                 }
             }
